@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-assets>        
+      <img id="stares" src="textures/wood/TexturesCom_WoodFine0065_8_M.jpg">
+      <img id="pivot2" src="textures/wood/TexturesCom_WoodFine0065_7_M.jpg">
+      <img id="background" src="textures/hdr/TexturesCom_NorwayForest_8K_hdri_sphere_tone.jpg">        
+      <img id="floor" src="textures/floor/TilesRelief0025_3_seamless_S.jpg">
+      <img id="other" src="textures/wood/TexturesCom_WoodFine0081_2_M.jpg">
+      <img id="normal" src="textures/wood/TexturesCom_WoodFine0081_2_M-normal.png">
+    </a-assets>
+    <a-scene>   
+      <a-entity rotation="-35 40 0">
+        <a-camera aceleration="30000" position="2 1 7"></a-camera> 
+      </a-entity>        
+                
+      <a-plane src="#floor" repeat="6 6" position="0 -1 -1.5" rotation="-90 0 0" width="10" height="10"></a-plane>     
+      <a-box src="#other" repeat="1 2" position="0 1.1 -1.25" rotation="0 0 180" geometry="width: 3; height: 0.2; depth: 3"></a-box>
+      <a-box src="#pivot2" repeat="1 2" geometry="height: 2; depth: 0.5; width: 0.5" position="1.25 0 -2.5"></a-box>    
+      <a-box src="#pivot2" repeat="1 2" geometry="height: 2; depth: 0.5; width: 0.5" position="1.25 0 0"></a-box>
+      <a-box src="#pivot2" repeat="1 2" geometry="height: 2; depth: 0.5; width: 0.5" position="-1.25 0 0"></a-box>
+      <a-box src="#pivot2" repeat="1 2" geometry="height: 2; depth: 0.5; width: 0.5" position="-1.25 0 -2.5"></a-box>
+
+      <a-box src="#pivot2" geometry="depth: 0.2; width: 0.2" position="1.8 -0.5 -0.85"></a-box>
+      <a-box src="#pivot2" geometry="depth: 0.2; width: 0.2" position="2.6 -0.5 -0.85"></a-box>
+      <a-box src="#pivot2" geometry="depth: 0.2; width: 0.2" position="2.6 -0.5 -1.65"></a-box>
+      <a-box src="#pivot2" geometry="depth: 0.2; width: 0.2" position="1.8 -0.5 -1.65"></a-box>
+      <a-box src="#stares" repeat="1.25 3" geometry="height: 0.1" position="2.2 0.05 -1.25" color="#FFD" ></a-box>
+      <a-box src="#pivot2" geometry="depth: 0.2; width: 0.2" position="2.6 0.6 -1.65"></a-box>
+      <a-box src="#pivot2" geometry="depth: 0.2; width: 0.2" position="2.6 0.6 -0.85"></a-box>
+      <a-box src="#pivot2" geometry="width: 0.25; height: 0.1; depth: 0.6" position="2.6 0.8 -1.25" rotation="0 0 90" color="#FFD"></a-box>    
+      <a-sky src="#background" color="FFF"></a-sky>
+    </a-scene>
+  </body>
+</html> 

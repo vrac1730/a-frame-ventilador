@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>   
+      <a-assets>        
+        <img id="pivot" src="textures/brick/TexturesCom_BrickFacade0027_1_M.jpg">
+        <img id="stares" src="textures/brick/TexturesCom_BrickFacade0051_1_M.jpg">
+        <img id="background" src="textures/hdr/TexturesCom_HDRPanorama0035_colorful_alley_8K_hdri_sphere_tone.jpg">        
+        <img id="floor" src="textures/floor/TilesRelief0025_3_seamless_S.jpg">
+      </a-assets>
+      <a-entity position="0 4 10" id="e-cam" camera="active: true"></a-entity>
+      <a-entity position="0 0 -4" rotation="-90 0 0" geometry="primitive: plane; color: #FFF; width: 20; height: 20" material="src: #floor; repeat: 5 5"></a-entity>
+      <a-entity position="1.9 1 -2.205" rotation="0 0 180" geometry="primitive: box; color: #FFF; width: 4; height: 2; depth: 6" material="src: #stares; repeat: 2 1.5"></a-entity>
+      <a-entity position="-0.1 3 -2.205" rotation="0 0 180" geometry="primitive: box; color: #FFF; width: 4; height: 2; depth: 6" material="src: #stares; repeat: 2 1.5"></a-entity>
+      <a-entity position="-2.1 5 -2.205" rotation="0 0 180" geometry="primitive: box; color: #FFF; width: 4; height: 2; depth: 6" material="src: #stares; repeat: 2 1.5"></a-entity>
+      <a-entity position="-3.9 7 -2.205" rotation="0 0 180" geometry="primitive: box; color: #FFF; width: 4; height: 2; depth: 6" material="src: #stares; repeat: 2 1.5"></a-entity>
+      <a-entity position="-1.6 1 0.295" rotation="0 0 0" geometry="primitive: box; color: #FFF; width: 1; height: 2; depth: 1" material="src: #pivot"></a-entity>
+      <a-entity position="-1.6 1 -4.705" rotation="0 0 0"geometry="primitive: box; color: #FFF; width: 1; height: 2; depth: 1" material="src: #pivot"></a-entity>
+      <a-entity position="-5.4 3 0.295" rotation="0 0 0" geometry="primitive: box; color: #FFF; width: 1; height: 6; depth: 1" material="src: #pivot; repeat: 1 3"></a-entity>
+      <a-entity position="-5.4 3 -4.705" rotation="0 0 0" geometry="primitive: box; color: #FFF; width: 1; height: 6; depth: 1" material="src: #pivot; repeat: 1 3"></a-entity>
+      <a-sky geometry="primitive: sphere; radius: 500; color: #FFF" material="src: #background"></a-sky>
+
+      <!-- <a-camera position="0 4 10" id="e-cam"></a-camera> 
+      <a-plane src="#floor" repeat="5 5 1" position="0 0 -4" color="#FFF" rotation="-90 0 0" width="20" height="20"></a-plane>       
+      <a-box src="#stares" repeat="2 1.5 1" position="1.900 1 -2.205" rotation="0 0 180" width="4" height="2" depth="6" color="#FFF" geometry="height: 2"></a-box>
+      <a-box src="#stares" repeat="2 1.5 1" position="-0.100 3 -2.205" rotation="0 0 180" width="4" height="2" depth="6" color="#FFF" geometry="height: 2"></a-box>
+      <a-box src="#stares" repeat="2 1.5 1" position="-2.100 5 -2.205" rotation="0 0 180" width="4" height="2" depth="6" color="#FFF" geometry="height: 2"></a-box>
+      <a-box src="#stares" repeat="2 1.5 1" position="-3.900 7 -2.205" rotation="0 0 180" width="4" height="2" depth="6" color="#fff" geometry="height: 2"></a-box>
+      <a-box src="#pivot" geometry="height: 2" position="-1.6 1 0.295"></a-box>
+      <a-box src="#pivot" geometry="height: 2" position="-1.6 1 -4.705"></a-box>
+      <a-box src="#pivot" repeat="1 3 1" geometry="height: 6" position="-5.4 3 0.295"></a-box>
+      <a-box src="#pivot" repeat="1 3 1" geometry="height: 6" position="-5.4 3 -4.705"></a-box>
+      <a-sky src="#background" color="#FFF"></a-sky> 
+    </a-scene>
+  </body> 
+</html>
